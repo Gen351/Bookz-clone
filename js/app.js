@@ -168,6 +168,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                 books.forEach(book => {
                     const bookCard = createBookCard(book);
                     bookListElem.appendChild(bookCard);
+                    if(bookCard) {
+
+                        // hide the info first, then Just show it when you hover over it.
+                        bookCard.author.hidden;
+                        bookCard.readCount.hidden;
+                        bookCard.comment.hidden;
+
+                        bookCard.addEventListener('hover', () => {
+                            bookCard.author.show;
+                            bookCard.readCount.show;
+                            bookCard.comment.show;
+                        })
+                    }
                 });
             } else {
                 noBooksMessageElem.style.display = 'block';
