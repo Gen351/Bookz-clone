@@ -184,7 +184,16 @@ header h1 {
     box-shadow: 0 2px 4px var(--shadow-color);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content at the top */
+    justify-content: flex-start;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Start smaller */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition opacity and scale */
+}
+
+/* When the card is shown (add a class like 'show' dynamically) */
+.book-card.show {
+    opacity: 1; /* Make visible */
+    transform: scale(1); /* Grow to original size */
 }
 
 .book-card h3 {
