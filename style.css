@@ -195,29 +195,30 @@ header h1 {
     font-size: 1.4em;
 }
 
-.book-card .comment-wrapper {
+.comment-wrapper {
+    width: 100%; /* Ensure it spans the full width */
+    margin-top: 8px;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    width: 100%;  /* Ensure it takes up full width */
+    align-items: flex-start; /* Align the label and comment to the left */
 }
 
-.book-card .comment-wrapper label {
-    margin-bottom: 5px; /* Label spacing */
+.comment-label {
+    font-weight: bold;
+    margin-bottom: 4px; /* Add a little space between the label and comment */
 }
 
-.book-card .comment {
+.comment {
     font-family: 'Courier New', Courier, monospace;
     background-color: #fefcf5;
     padding: 10px;
-    width: 100%; /* Full width of the card */
-    max-width: 100%; /* Ensure it's not wider than the card */
-    min-height: 100px; /* Set a fixed height */
+    max-height: 100px; /* Fixed height for the comment area */
+    overflow-y: auto; /* Allow scroll if the comment is too long */
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    margin-top: 4px;
     box-sizing: border-box;
-    margin-top: 5px; /* Reduced margin between label and comment */
-    overflow-y: auto;
-    resize: none; /* Disable dynamic resizing */
-    text-align: left; /* Align text to the left */
 }
 
 .book-actions {
