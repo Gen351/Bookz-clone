@@ -195,11 +195,17 @@ header h1 {
     font-size: 1.4em;
 }
 
-.book-card p {
-    margin: 5px 0;
-    font-size: 0.95em;
-    color: var(--text-color);
-    /* Remove flex-grow to prevent stretching */
+.book-card p,
+.book-actions {
+    opacity: 0;
+    transform: scale(0.9); /* Slightly shrunk */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.book-card.show-details p,
+.book-card.show-details .book-actions {
+    opacity: 1;
+    transform: scale(1); /* Return to normal size */
 }
 
 .book-card .comment {
