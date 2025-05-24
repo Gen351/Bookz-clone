@@ -185,13 +185,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transform: scale(0.9); /* Start smaller */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transition opacity and scale */
-}
-
-/* When the card is shown (add a class like 'show' dynamically) */
-.book-card, h3.show, p.show, .comment.show, .btn.show {
-    transform: scale(1); /* Grow to original size */
 }
 
 .book-card h3 {
