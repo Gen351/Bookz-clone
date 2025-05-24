@@ -185,7 +185,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition opacity and scale */
+    align-items: flex-start;
 }
 
 .book-card h3 {
@@ -196,20 +196,21 @@ header h1 {
 }
 
 .book-card .comment {
-    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #fefcf5;
-    padding: 8px;
-    border-radius: 4px;
-    margin-top: 10px;
-    max-height: 100px;
+    padding: 8px; /* Reduced padding */
+    margin-top: 8px; /* Reduced margin-top */
+    max-height: 80px;
     overflow-y: auto;
 }
 
+
 .book-actions {
-    margin-top: 15px;
+    margin-top: 12px;
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
+
 
 .book-actions .btn {
     padding: 8px 12px;
