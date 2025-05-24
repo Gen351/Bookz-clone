@@ -171,9 +171,9 @@ header h1 {
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: 250px;
-    gap: 10px;
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: repeat(auto-fill, minmax(0, 250px)); /* Items will have a max height of 250px */
+    gap: 10px; /* Optional gap between items */
 }
 
 .book-card {
