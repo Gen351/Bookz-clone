@@ -184,11 +184,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     // Show details on click
                     bookCard.addEventListener('click', () => {
-                        author.hidden = !author.hidden;
-                        readCount.hidden = !readCount.hidden;
-                        comment.hidden = !comment.hidden;
-                        editBtn.hidden = !editBtn.hidden;
-                        deleteBtn.hidden = !deleteBtn.hidden;
+                        // Toggle the visibility of the details
+                        const isDetailsVisible = !author.hidden;
+                    
+                        author.hidden = isDetailsVisible;
+                        readCount.hidden = isDetailsVisible;
+                        comment.hidden = isDetailsVisible;
+                        editBtn.hidden = isDetailsVisible;
+                        deleteBtn.hidden = isDetailsVisible;
+                    
+                        // Add transition effect by toggling the 'show-details' class
+                        if (isDetailsVisible) {
+                            bookCard.classList.remove('show-details');
+                        } else {
+                            bookCard.classList.add('show-details');
+                        }
                     });
                 });
             } else {
