@@ -172,12 +172,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // Hide details initially
                     const author = bookCard.querySelector('.author');
                     const readCount = bookCard.querySelector('.read-count');
+                    const commentLabel = bookCard.querySelector('comment-label');
                     const comment = bookCard.querySelector('.comment');
                     const editBtn = bookCard.querySelector('.btn.btn-secondary');
                     const deleteBtn = bookCard.querySelector('.btn.btn-danger');
 
                     author.hidden = true;
                     readCount.hidden = true;
+                    commentLabel.hidden = true;
                     comment.hidden = true;
                     editBtn.hidden = true;
                     deleteBtn.hidden = true;
@@ -189,6 +191,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     
                         author.hidden = isDetailsVisible;
                         readCount.hidden = isDetailsVisible;
+                        commentLabel.hidden = isDetailsVisible;
                         comment.hidden = isDetailsVisible;
                         editBtn.hidden = isDetailsVisible;
                         deleteBtn.hidden = isDetailsVisible;
@@ -232,7 +235,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Create the comment itself
         const comment = document.createElement('p');
         comment.classList.add('comment');
-        comment.innerHTML = `<strong>Notes:</strong> ${book.comment || '<em>No comments yet.</em>'}`;
+        comment.innerHTML = `<strong></strong> ${book.comment || '<em>No comments yet.</em>'}`;
         if (book.comment && book.comment.length > 100) {
             comment.innerHTML = `<strong>Notes:</strong> ${book.comment.substring(0, 100)}...`;
         }
