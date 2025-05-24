@@ -192,13 +192,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         comment.hidden = isDetailsVisible;
                         editBtn.hidden = isDetailsVisible;
                         deleteBtn.hidden = isDetailsVisible;
-                    
-                        // Add transition effect by toggling the 'show-details' class
-                        if (isDetailsVisible) {
-                            bookCard.classList.remove('show-details');
-                        } else {
-                            bookCard.classList.add('show-details');
-                        }
                     });
                 });
             } else {
