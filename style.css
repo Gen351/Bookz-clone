@@ -190,8 +190,7 @@ header h1 {
 }
 
 /* When the card is shown (add a class like 'show' dynamically) */
-.book-card h3.show, p.show, .comment.show, .btn.show {
-    opacity: 1; /* Make visible */
+.book-card, h3.show, p.show, .comment.show, .btn.show {
     transform: scale(1); /* Grow to original size */
 }
 
