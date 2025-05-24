@@ -53,7 +53,7 @@ header h1 {
 
 
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 12px; /* Reduced space between form fields */
     text-align: left;
 }
 
@@ -195,22 +195,30 @@ header h1 {
     font-size: 1.4em;
 }
 
+.book-card .comment-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.book-card .comment-wrapper label {
+    margin-bottom: 5px; /* Label spacing */
+}
+
 .book-card .comment {
     font-family: 'Courier New', Courier, monospace;
     background-color: #fefcf5;
-    padding: 8px; /* Reduced padding */
-    margin-top: 8px; /* Reduced margin-top */
+    padding: 8px;
+    margin-top: 0;
     max-height: 80px;
     overflow-y: auto;
 }
-
 
 .book-actions {
     margin-top: 12px;
     display: flex;
     gap: 8px;
 }
-
 
 .book-actions .btn {
     padding: 8px 12px;
