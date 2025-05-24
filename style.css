@@ -173,6 +173,7 @@ header h1 {
     display: grid;
     grid-template-columns: 1fr; /* One column */
     grid-auto-rows: auto;
+    gap: 5px;
 }
 
 .book-card {
@@ -190,7 +191,7 @@ header h1 {
 .book-card h3 {
     color: var(--accent-color);
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-size: 1.4em;
 }
 
@@ -204,12 +205,12 @@ header h1 {
 .book-card .comment {
     font-family: 'Courier New', Courier, monospace;
     background-color: #fefcf5;
-    padding: 10px;
+    padding: 6px;
     width: 100%; /* Full width of the card */
     max-width: 100%; /* Ensure it's not wider than the card */
-    min-height: 100px; /* Set a fixed height */
+    min-height: 80px; /* Set a fixed height */
     box-sizing: border-box;
-    margin-top: 5px; /* Reduced margin between label and comment */
+    margin-top: 3px; /* Reduced margin between label and comment */
     overflow-y: auto;
     resize: none; /* Disable dynamic resizing */
     text-align: left; /* Align text to the left */
