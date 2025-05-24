@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         bookCard.readCount.hidden;
                         bookCard.comment.hidden;
 
-                        bookCard.addEventListener('hover', () => {
+                        bookCard.addEventListener('click', () => {
                             bookCard.author.show;
                             bookCard.readCount.show;
                             bookCard.comment.show;
