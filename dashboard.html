@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tracker - Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard_style.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
@@ -16,6 +16,16 @@
                 <button id="logout-button" class="btn btn-secondary">Logout</button>
             </div>
         </header>
+
+        <nav class="open">
+            <ul>
+                <li>Add a book</li>
+                <li>My Books</li>
+            </ul>
+
+            <footer>Logout</footer>
+        </nav>
+
 
         <main>
             <section class="add-book-section">
