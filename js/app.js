@@ -142,6 +142,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             saveBookButton.textContent = 'Add Book';
             cancelEditButton.style.display = 'none';
             formErrorMessageElem.textContent = '';
+            
+            // Add the "close Add" here
+            if(!document.querySelector('.add-book-section').classList.contains("collapsed")) {
+                document.querySelector('.add-book-section').classList.add("collapsed");
+            }
         });
     }
 
