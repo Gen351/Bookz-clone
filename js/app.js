@@ -146,66 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
 
-// In the loadBooks function, update the book card creation logic
-    // Function to load books
-    async function loadBooks() {
-        if (!bookListElem || !loadingMessageElem || !noBooksMessageElem) return;
-
-        bookListElem.innerHTML = ''; // Clear current list
-        loadingMessageElem.style.display = 'block';
-        noBooksMessageElem.style.display = 'none';
-
-        try {
-            const { data: books, error } = await supabase
-                .from('books')
-                .select('*')
-                .eq('user_id', currentUser.id);
-
-            if (error) throw error;
-
-            loadingMessageElem.style.display = 'none';
-            if (books && books.length > 0) {
-                books.forEach(book => {
-                    const bookCard = createBookCard(book);
-                    bookListElem.appendChild(bookCard);
-
-                    // Hide details initially
-                    const author = bookCard.querySelector('.author');
-                    const readCount = bookCard.querySelector('.read-count');
-                    const commentLabel = bookCard.querySelector('.comment-label');
-                    const comment = bookCard.querySelector('.comment');
-                    const editBtn = bookCard.querySelector('.btn.btn-secondary');
-                    const deleteBtn = bookCard.querySelector('.btn.btn-danger');
-
-                    author.hidden = true;
-                    readCount.hidden = true;
-                    commentLabel.hidden = true;
-                    comment.hidden = true;
-                    editBtn.hidden = true;
-                    deleteBtn.hidden = true;
-
-                    // Show details on click
-                    bookCard.addEventListener('click', () => {
-                        // Toggle the visibility of the details
-                        const isDetailsVisible = !author.hidden;
-                    
-                        author.hidden = isDetailsVisible;
-                        readCount.hidden = isDetailsVisible;
-                        commentLabel.hidden = isDetailsVisible;
-                        comment.hidden = isDetailsVisible;
-                        editBtn.hidden = isDetailsVisible;
-                        deleteBtn.hidden = isDetailsVisible;
-                    });
-                });
-            } else {
-                noBooksMessageElem.style.display = 'block';
-            }
-        } catch (error) {
-            console.error('Error loading books:', error.message);
-            loadingMessageElem.textContent = `Failed to load books: ${error.message}`;
-        }
-    }
-    
+    // In the loadBooks function, update the book card creation logic
     // Function to load books
     async function loadBooks() {
         if (!bookListElem || !loadingMessageElem || !noBooksMessageElem) return;
