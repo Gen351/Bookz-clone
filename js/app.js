@@ -250,7 +250,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         const editButton = document.createElement('button');
         editButton.classList.add('btn', 'btn-secondary');
         editButton.textContent = 'Edit';
-        editButton.addEventListener('click', () => populateEditForm(book));
+        editButton.addEventListener('click', () => {
+            populateEditForm(book);
+            if(document.querySelector('.add-book-section').classList.contains("collapsed")) {
+                document.querySelector('.add-book-section').classList.remove("collapsed");
+            }
+        });
     
         const deleteButton = document.createElement('button');
         deleteButton.classList.add('btn', 'btn-danger');

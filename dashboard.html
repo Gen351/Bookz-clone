@@ -19,7 +19,7 @@
 
 
         <main>
-            <section class="add-book-section">
+            <section class="add-book-section collapsed">
                 <h2>Add a New Book</h2>
                 <form id="add-book-form">
                     <input type="hidden" id="book-id"> <div class="form-group">
@@ -60,5 +60,12 @@
 
     <script src="js/supabaseClient.js"></script>
     <script src="js/app.js"></script>
+
+    <script>
+        const AddBookSectionTitle = document.querySelector('.add-book-section h2');
+        AddBookSectionTitle.addEventListener('click', () => {
+            document.querySelector('.add-book-section').classList.toggle("collapsed");
+        }); 
+    </script>
 </body>
 </html>

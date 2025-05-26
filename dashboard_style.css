@@ -61,6 +61,8 @@ header h1 {
     font-weight: bold;
 }
 
+
+/* Add book section */
 .add-book-section, .book-list-section {
     background-color: #fff8e7;
     padding: 20px;
@@ -77,6 +79,31 @@ header h1 {
     margin-bottom: 20px;
 }
 
+.add-book-section.collapsed * {
+    display: none;
+}
+
+.add-book-section.collapsed h2 {
+    display: block;
+    cursor: pointer;
+}
+
+.add-book-section {
+    transition: background-color 0.3s;
+}
+.add-book-section:hover {
+    .add-book-section h2 {
+        color: var(--container-bg);
+        border-bottom: none;
+    }
+    .btn {
+        color: var(--accent-color);
+        background-color: var(--light-text);
+    }
+    background-color: var(--accent-color);
+}
+
+/* Add book forms */
 .form-group {
     margin-bottom: 12px;
     text-align: left;
